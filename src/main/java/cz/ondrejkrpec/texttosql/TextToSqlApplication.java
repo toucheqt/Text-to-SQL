@@ -9,5 +9,4 @@ public class TextToSqlApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TextToSqlApplication.class, args);
 	}
-
 }
