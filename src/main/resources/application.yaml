@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: Text to SQL
+
+  jpa:
+    open-in-view: false
+
+  # Database configuration
+  datasource:
+    url: jdbc:postgresql://db:5432/test-to-sql
+    username: postgres
+    password: postgres
+
+# Logging
+logging:
+  level:
+    org.hibernate: INFO
+    cz.ondrejkrpec.texttosql: INFO

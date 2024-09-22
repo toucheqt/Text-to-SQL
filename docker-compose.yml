@@ -1,0 +1,24 @@
+version: "3.9"
+name: Text to SQL
+services:
+  backend-app:
+    build:
+      dockerfile: Dockerfile
+    image: text-to-sql:latest
+    environment:
+      TZ: Europe/Prague
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  db:
+    image: postgres:16.4-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+  app-network:
